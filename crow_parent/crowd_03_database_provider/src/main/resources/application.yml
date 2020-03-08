@@ -1,0 +1,54 @@
+server:
+  port: 8000
+spring:
+  aop:
+    #开启aop代理
+    auto: true
+    proxy-target-class: true
+
+  application:
+    name: database-provider #当前微服务名称，注册服务信息时必须有
+  profiles: database_provider_01
+
+  datasource:
+    username: zangs
+    password: 111111
+    url: jdbc:postgresql://localhost:5432/distrbute_crow
+    driver-class-name: org.postgresql.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      # 初始连接数
+      initial-size: 5
+      # 最大激活数
+      max-active: 50
+      # 最大等待时间
+      max-wait: 3000
+      # 是否启用非公平锁
+      use-unfair-lock: true
+      # mysql 用 false | oracle 用 true
+      pool-prepared-statements: false
+nutz:
+  json:
+    auto-unicode: false
+    quote-name: true
+    ignore-null: true
+    null-as-emtry: true
+    enabled: true
+    mode: compact
+  dao:
+    runtime:
+      create: true #自动创建表
+      migration: false #根据bena自动更新表结构
+      basepackage: com.zangs.crow.base.bean.*  #扫描bean
+    sqlmanager:
+      paths:
+        - sqls
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+eureka:
+  client:
+    service-url:
+      defaultZone: http://registry-center:7000/eureka/eureka
+  instance:
+    prefer-ip-address: true

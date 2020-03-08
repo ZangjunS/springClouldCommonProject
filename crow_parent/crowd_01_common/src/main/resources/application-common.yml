@@ -1,0 +1,24 @@
+message:
+  host: https://dxyzm.market.alicloudapi.com
+  path: /chuangxin/dxjk
+  method: POST
+  template:
+    register: 【zangs】尾号%s的验证码是：%s，3分钟内有效！
+aliyun:
+  appcode: 9e1586f743b3497c88873d13b410a156
+  oss:
+    userName: zzzzz@1235436067516616.onaliyun.com
+    password: g8k$rJ6)!B3aX8uYtFS!cvRatHCOFdeN
+    accessKeyID: LTAI4FgULy38Vei2K47LPRKo
+    accessKeySecret: 5MdeiPfMeLQYQx9sSHhqQN6hxdD8V6
+    endPoint: oss-cn-shenzhen.aliyuncs.com
+    crowBucketName: zangs-crow
+spring:
+  profiles: common
+#JWT 密钥
+jwt:
+  secretKey: 78944878877848fg)
+  accessTokenExpireTime: PT2H
+  refreshTokenExpireTime: PT8H
+  refreshTokenExpireAppTime: P30D
+  issuer: zangs.com

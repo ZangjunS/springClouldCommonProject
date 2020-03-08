@@ -1,0 +1,13 @@
+server:
+  port: 8020
+spring:
+  application:
+    name: main-file
+  profiles: main_file
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://registry-center:7000/eureka/eureka/
+  instance:
+    prefer-ip-address: true

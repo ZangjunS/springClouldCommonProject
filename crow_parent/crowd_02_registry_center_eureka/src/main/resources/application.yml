@@ -1,0 +1,14 @@
+server:
+  port: 7000
+  servlet:
+    context-path: /eureka
+eureka:
+  instance:
+    hostname: registry-center
+  client:
+    register-with-eureka: false #自己就是注册中心，不用注册自己
+    fetch-registry: false #不从其他注册中心取回服务地址
+    service-url:
+       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/eureka
+spring:
+  profiles: eureka_01

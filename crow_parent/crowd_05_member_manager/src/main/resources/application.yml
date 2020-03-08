@@ -1,0 +1,15 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: member-manager
+  profiles: member_manager
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/eureka/
+  instance:
+    prefer-ip-address: true
+
+message:
+  registryCodeRemindTime: 15
