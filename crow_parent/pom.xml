@@ -67,7 +67,7 @@
         <mysql.connector>5.1.42</mysql.connector>
         <postgres.version>42.2.8</postgres.version>
         <!-- 基础框架 -->
-        <spring.version>5.2.2.RELEASE</spring.version>
+        <spring.version>5.3.18</spring.version>
         <mybatis.spring.boot.starter>2.1.0</mybatis.spring.boot.starter>
 
         <!-- 分页 -->
